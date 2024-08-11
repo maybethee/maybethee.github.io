@@ -131,6 +131,11 @@ span {
   height: 300px;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 @keyframes bgColor {
   0% {
     background: #ffefee;
