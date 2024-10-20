@@ -36,7 +36,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   background-color: #ffeeed;
-  animation: bgColor 100s infinite linear;
+  animation: bgColor 25s infinite linear;
 }
 ol,
 ul {
@@ -65,10 +65,11 @@ body {
 }
 
 span {
-  font-family: "noto-sans", sans-serif;
-  font-weight: 800;
-  text-decoration: underline;
-  min-width: 100%;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
 }
 
 svg {
@@ -78,33 +79,28 @@ svg {
 }
 
 .header {
-  width: 33rem;
-  font-weight: 400;
-  font-size: 5rem;
   padding: 0.5rem 1rem;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 #projects {
-  margin: 1.5rem 3rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.project-container {
-  border-radius: 8px;
-}
 .project-link img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 .project-container {
+  border-radius: 8px;
   display: flex;
   flex-flow: column;
   background-color: rgb(209, 209, 209);
-
   animation: glow-reverse 250ms ease-in-out forwards;
 }
 
@@ -192,5 +188,23 @@ a:hover {
   }
   100% {
     box-shadow: 1px 1px 14px 4px rgba(162, 154, 154, 0.75);
+  }
+}
+
+@media (min-width: 576px) {
+  .header {
+    font-size: 4rem;
+  }
+
+  #projects {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    font-size: 5rem;
   }
 }
